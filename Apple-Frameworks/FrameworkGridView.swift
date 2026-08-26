@@ -9,13 +9,20 @@ import SwiftUI
 
 struct FrameworkGridView: View {
     
-    let colums : [GridItem] = [GridItem(.flexible())]
+    let colums : [GridItem] = [GridItem(.flexible()),
+                               GridItem(.flexible()),
+                               GridItem(.flexible())]
     var body: some View {
-        LazyVGrid(columns: colums){
-            FrameworkTitleView(name: "App Clips", imageName: "app-clip")
-            FrameworkTitleView(name: "App Clips", imageName: "app-clip")
-            FrameworkTitleView(name: "App Clips", imageName: "app-clip")
-            FrameworkTitleView(name: "App Clips", imageName: "app-clip")
+        NavigationStack {
+            ScrollView {
+                LazyVGrid(columns: colums){
+                    ForEach(MockData.frameworks, id: \.id) { framework in
+                        FrameworkTitleView(framework : framework)
+                    }
+                }
+            }.navigationTitle("Frameworks")
+                .font(.subheadline)
+                .foregroundStyle(.white)
         }
         
         
@@ -24,24 +31,45 @@ struct FrameworkGridView: View {
 
 #Preview {
     FrameworkGridView()
+        .preferredColorScheme(.dark)
 }
 
 struct FrameworkTitleView : View {
-    let name: String
-    let imageName : String
+    
+    let framework : Framework
     
     var body: some View {
         VStack {
-            Image(imageName)
+            Image(framework.imageName)
                 .resizable()
-                .frame(width: 90,height: 90 )
+                .frame(width: 80,height: 80)
             
-            Text(name)
+            Text(framework.name)
                 .font(.title2)
                 .fontWeight(.semibold)
                 .scaledToFit()
                 .minimumScaleFactor(0.5)
+        }.padding()
+    }
+}
 
+struct FrameworkDetailsView : View {
+    let framework : Framework
+    
+    var body: some View {
+        VStack {
+            Image(framework.imageName)
+                .resizable()
+                .frame(width: 80,height: 80)
+            
+            Text(framework.name)
+                .font(.title2)
+                .fontWeight(.semibold)
+                .scaledToFit()
+                .minimumScaleFactor(0.5)
+            
+            Text(framework.description)
+                .font(.caption)
         }
     }
 }
