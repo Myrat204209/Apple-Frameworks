@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct FrameworkButton: View {
+    var title : String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button{
+            
+        } label: {
+            Text (title)
+                .font(.title2)
+                .fontWeight(.semibold)
+                .frame(width: 280,height: 50)
+                .background(.red)
+                .foregroundStyle(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 14))
+        }
     }
 }
 
 #Preview {
-    FrameworkButton()
+    FrameworkButton(title: "Learn More")
+        .preferredColorScheme(.dark)
 }
