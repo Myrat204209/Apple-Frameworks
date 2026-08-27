@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		AAB7F73C303EBB7B0084E670 /* Apple-Frameworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple-Frameworks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAB7F73C303EBB7B0084E670 /* Apple-Frameworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Apple-Frameworks.app"; path = "/Users/azat/Projects/SwiftAppDevelopment/Apple-Frameworks/build/Debug-iphoneos/Apple-Frameworks.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,16 +33,7 @@
 			isa = PBXGroup;
 			children = (
 				AAB7F73E303EBB7B0084E670 /* Apple-Frameworks */,
-				AAB7F73D303EBB7B0084E670 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		AAB7F73D303EBB7B0084E670 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AAB7F73C303EBB7B0084E670 /* Apple-Frameworks.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,7 +86,7 @@
 			mainGroup = AAB7F733303EBB7B0084E670;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = AAB7F73D303EBB7B0084E670 /* Products */;
+			productRefGroup = AAB7F733303EBB7B0084E670;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (

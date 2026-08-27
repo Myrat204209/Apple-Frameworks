@@ -11,9 +11,7 @@ struct FrameworkButton: View {
     var title : String
     
     var body: some View {
-        Button{
-            
-        } label: {
+        
             Text (title)
                 .font(.title2)
                 .fontWeight(.semibold)
@@ -21,7 +19,7 @@ struct FrameworkButton: View {
                 .background(.red)
                 .foregroundStyle(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 14))
-        }
+        
     }
 }
 
