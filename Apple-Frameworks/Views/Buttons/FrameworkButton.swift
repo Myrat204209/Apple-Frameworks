@@ -11,8 +11,7 @@ struct FrameworkButton: View {
     var title : String
     
     var body: some View {
-        
-            Text (title)
+            Text(title)
                 .font(.title2)
                 .fontWeight(.semibold)
                 .frame(width: 280,height: 50)

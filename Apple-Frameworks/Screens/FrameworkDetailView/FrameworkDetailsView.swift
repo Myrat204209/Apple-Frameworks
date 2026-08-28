@@ -15,10 +15,10 @@ struct FrameworkDetailsView : View {
     var body: some View {
         VStack(spacing : 14){
             
-            XDismissButton(isShowingDetailView: $isShowingDetailView)
+//            XDismissButton(isShowingDetailView: $isShowingDetailView)
             Spacer()
             
-            FrameworkTitleView(framework: framework)
+            FrameworkGridTitleView(framework: framework)
             
             Text(framework.description)
                 .font(.body)
@@ -32,7 +32,6 @@ struct FrameworkDetailsView : View {
                 FrameworkButton(title: "Learn More")
                 
             }
-            
                 
         }
         .fullScreenCover(isPresented: $isShowingSafariView, content: {

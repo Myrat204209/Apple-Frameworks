@@ -1,20 +1,21 @@
 import SwiftUI
 
-struct FrameworkTitleView : View {
+struct FrameworkListTitleView : View {
     
     let framework : Framework
     
     var body: some View {
-        VStack {
+        HStack {
             Image(framework.imageName)
                 .resizable()
-                .frame(width: 80,height: 80)
+                .frame(width: 60,height: 60)
             
             Text(framework.name)
                 .font(.title2)
                 .fontWeight(.semibold)
                 .scaledToFit()
                 .minimumScaleFactor(0.5)
-        }.padding()
+                .padding()
+        }
     }
 }

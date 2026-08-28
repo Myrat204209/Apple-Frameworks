@@ -9,7 +9,7 @@ struct FrameworkGridView: View {
             ScrollView {
                 LazyVGrid(columns: viewModel.columns){
                     ForEach(MockData.frameworks, id: \.id) { framework in
-                        FrameworkTitleView(framework : framework)
+                        FrameworkGridTitleView(framework : framework)
                             .onTapGesture {
                                 viewModel.selectedFramework = framework
                             }
