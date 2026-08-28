@@ -11,7 +11,7 @@ struct FrameworkListView: View {
                     NavigationLink(
                         destination: FrameworkDetailsView(
                             framework: framework,
-                            isShowingDetailView: $viewModel.isShowingDetailView
+//                            isShowingDetailView: $viewModel.isShowingDetailView
                         )
                     ){
                         FrameworkListTitleView(framework : framework)
